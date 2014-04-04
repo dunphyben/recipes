@@ -1,0 +1,9 @@
+<h1><%= @recipe.name %></h1>
+
+<p><%= @recipe.description %></p>
+
+<p>Tags: <%= @recipe.tags.first.name %></p>
+
+<h5><a href="/recipes">Back to Home Page</a></h5>
+
+<h5><a href="/recipes/<%= @recipe.id %>/edit">Edit Recipe</a></h5>

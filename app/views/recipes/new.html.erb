@@ -1,0 +1,20 @@
+<% content_for(:page_title, "New Recipe") %>
+
+<h1>le ADD le new le recepeee</h1>
+<% if @recipe.errors.any? %>
+  <h3>S'il vous plaît corriger ces erreurs</h3>
+  <ul>
+    <li><%= "this is the thing having errors: #{@recipe}" %></li>
+  <% @recipe.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+  </ul>
+<% end %>
+
+<%#= render('layouts/errors', :object => @recipe) %>
+
+<form action="/recipes" method="post">
+  <%= render('form') %>
+  <br>
+    <button type="submit">Créer Recette</button>
+</form>

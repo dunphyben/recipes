@@ -1,0 +1,13 @@
+
+  <label for="recipe_name">Name</label><br>
+  <input id="recipe_name" type="text" name="recipe[name]" value="<%= @recipe.name %>"><br><br>
+  <label for="recipe_description">Description</label><br>
+  <textarea cols='80' rows='10' id="recipe_description" name="recipe[description]"><%= @recipe.description %></textarea><br><br>
+  <label for="tags">Tags</label><br>
+  <select id="tags" name="tag[id]">
+  <option selected disabled>Choose One</option>
+  <% @tags.each do |tag| %>
+    <option value="<%= tag.id %>"><%= tag.name %></option><br>
+  <% end %>
+  </select>
+
